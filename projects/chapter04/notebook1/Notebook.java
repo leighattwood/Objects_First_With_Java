@@ -45,15 +45,54 @@ public class Notebook
      */
     public void showNote(int noteNumber)
     {
-        if(noteNumber < 0) {
+        if(noteNumber < 0) 
+        {
             // This is not a valid note number, so do nothing.
+            System.out.println("Please enter a number that is greater than or equal to 0");
         }
-        else if(noteNumber < numberOfNotes()) {
+        else if(noteNumber < numberOfNotes()) 
+        {
             // This is a valid note number, so we can print it.
             System.out.println(notes.get(noteNumber));
         }
-        else {
+        else 
+        {
             // This is not a valid note number, so do nothing.
+            System.out.println("There is no note at this index number");
+        }
+    }
+    
+    /**
+     * Remove a note.
+     * @param noteNumber The number of the note to be removed.
+     */
+    public void removeNote(int noteNumber)
+    {
+        if(noteNumber < 0) 
+        {
+            // This is not a valid note number, so do nothing.
+            System.out.println("Please enter a number that is greater than or equal to 0");
+        }
+        else if(noteNumber < numberOfNotes()) 
+        {
+            // This is a valid note number, so we can remove it.
+            notes.remove(noteNumber);
+        }
+        else 
+        {
+            // This is not a valid note number, so do nothing.
+            System.out.println("There is no note at this index number");
+        }
+    }
+    
+    /**
+     * Print out each note.
+     */
+    public void listNotes()
+    {
+        for(String note : notes)
+        {
+            System.out.println(note);
         }
     }
 }

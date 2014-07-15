@@ -1,0 +1,18 @@
+#BlueJ class context
+comment0.params=
+comment0.target=AddressBook()
+comment1.params=name\ email\ tel\ address
+comment1.target=void\ addContact(java.lang.String,\ java.lang.String,\ java.lang.String,\ java.lang.String)
+comment2.params=indexNum
+comment2.target=void\ removeContact(int)
+comment3.params=indexNum\ newName
+comment3.target=void\ amendName(int,\ java.lang.String)
+comment4.params=indexNum\ newEmail
+comment4.target=void\ amendEmail(int,\ java.lang.String)
+comment5.params=indexNum\ newTel
+comment5.target=void\ amendTel(int,\ java.lang.String)
+comment6.params=indexNum\ newAddress
+comment6.target=void\ amendAddress(int,\ java.lang.String)
+comment7.params=
+comment7.target=void\ printAddressBook()
+numComments=8
