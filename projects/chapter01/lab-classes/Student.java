@@ -20,6 +20,15 @@ public class Student
      */
     public Student(String fullName, String studentID)
     {
+        if(fullName.length() < 4)
+        {
+            System.out.println("Please add a fullname with more than four characters");
+        }
+        
+        if(studentID.length() < 3)
+        {
+            System.out.println("Warning: The StudentID was less than 3 characters");
+        }
         name = fullName;
         id = studentID;
         credits = 0;
@@ -72,7 +81,26 @@ public class Student
      */
     public String getLoginName()
     {
-        return name.substring(0,4) + id.substring(0,3);
+        String sub1;
+        String sub2;
+        if(name.length() >= 4)
+        {
+            sub1 = name.substring(0,4);
+        }
+        else
+        {
+            sub1 = name;
+        }
+        
+        if(id.length() >= 3)
+        {
+            sub2 = id.substring(0,3);
+        }
+        else
+        {
+            sub2 = id;
+        }
+        return sub1 + sub2;
     }
     
     /**
